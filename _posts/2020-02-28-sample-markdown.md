@@ -191,11 +191,11 @@ It can also be centered!
 
 つまり、`![Creape](/assets/img/crepe.jpg)`では表示できないので、以下のどちらかの方法を用いる必要がある。
 
-その１．　**{% raw %}![Creape](/blog/assets/img/crepe.jpg){% endraw %}**
+その１．　`![Creape](/blog/assets/img/crepe.jpg)`
 ![Creape](/blog/assets/img/crepe.jpg)
 
 
-その２. 　**{% raw %}![Creape]({{ '/assets/img/crepe.jpg' | relative_url }}){% endraw %}**
+その２. 　`{% raw %}![Creape]({{ '/assets/img/crepe.jpg' | relative_url }}){% endraw %}`
 ![Creape]({{ '/assets/img/crepe.jpg' | relative_url }})
 
 
