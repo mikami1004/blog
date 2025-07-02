@@ -159,7 +159,8 @@ int main() {
 | Ninez | Eleven | Female |
 | Neiy | Five | Female |
 | Kk | Three | Male |
-<br>
+
+
 # 数式
 MathJaxっていうのが使えるらしい。<br>
 You can use [MathJax](https://www.mathjax.org/) to write LaTeX expressions. For example:
