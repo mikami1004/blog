@@ -189,9 +189,9 @@ If the above image is broken, then you'll need to follow the instructions [in th
 
 ![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
 
-つまり、{% raw %}![Creape](/assets/img/crepe.jpg){% endraw %}では表示できないので、以下のどちらかの方法を用いる必要がある。
+つまり、`![Creape](/assets/img/crepe.jpg)`では表示できないので、以下のどちらかの方法を用いる必要がある。
 
-その１．　{% raw %}![Creape](/blog/assets/img/crepe.jpg){% endraw %}
+その１．　`![Creape](/blog/assets/img/crepe.jpg)`
 ![Creape](/blog/assets/img/crepe.jpg)
 
 <br>
@@ -221,4 +221,4 @@ You can add notification, warning and error boxes like this:
 
 ## Local URLs in project sites {#local-urls}
 
-## サイト内のリンクだよ{#local-link}
+## サイト内のリンクだよ {#local-link}
