@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ブログポストのためのマークダウン集
-subtitle: There's lots to learn!
+title: マークダウンの勉強だよ
+subtitle: ～Beautiful Jekyllってなんすか～
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
@@ -12,10 +12,130 @@ author: Bill Smith
 
 {: .box-success}
 This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/tables/etc.<br/>I also encourage you to look at the [code that created this post](https://raw.githubusercontent.com/daattali/beautiful-jekyll/master/_posts/2020-02-28-sample-markdown.md) to learn some more advanced tips about using markdown in Beautiful Jekyll.
+# 見出し
+- 二つ目までは下線がつくよ
 
-**Here is some bold text**
+```
+# 見出し
+## 見出し２
+###### 見出し６
+```
+結果↓
 
-## Here is a secondary heading
+# 見出し
+## 見出し２
+###### 見出し６
+</br>
+
+# 斜体、太字、訂正線
+
+```
+*斜体*
+**太字**
+~~訂正線~~
+```
+結果↓
+
+*斜体*</br>
+**太字**</br>
+~~訂正線~~</br>
+</br>
+
+# 箇条書き
+```
+- 1行目
+- 2行目
+  - ネスト1行目
+    - ネストのネスト1行目
+      - ネストのネストのネスト1行目
+```
+結果↓
+- 1行目
+- 2行目
+	- ネスト1行目
+		- ネストのネスト1行目
+			- ネストのネストのネスト1行目
+</br>
+
+# 番号付きリスト
+番号を変えなくても自動で順番にしてくれるよ
+```
+1. 肉
+1. 野菜
+	1. 緑黄色野菜
+		1. レタス
+		1. キャベツ
+	1. 野菜っておいしいよね
+1. 果物
+```
+結果↓
+1. 肉
+1. 野菜
+	1. 緑黄色野菜
+		1. レタス
+		1. キャベツ
+	1. 野菜っておいしいよね
+1. 果物
+</br>
+
+# コード記述
+三連バッククォートの後に言語名を描くと、その言語に合わせてシンタックスハイライトが適用されるよ
+````
+``` c
+#include <stdio.h>
+
+int main() {
+	printf("Hello World!");
+	return 0;
+}
+```
+````
+結果↓
+``` c
+#include <stdio.h>
+
+int main() {
+	printf("Hello World!");
+	return 0;
+}
+```
+Jekyll(Liquid)のタグによって以下のような記述も可能
+
+```
+{% hilight c %}
+int main() {
+	printf("Let's Go!");
+	return 0;
+}
+{% endhighlight %}
+```
+結果↓
+
+{% hilight c %}
+int main() {
+	printf("Let's Go!");
+	return 0;
+}
+{% endhighlight %}
+
+行番号付きにもできるよ
+```
+{% hilight c linenos %}
+int main() {
+	printf("Let's Go!");
+	return 0;
+}
+{% endhighlight %}
+```
+結果↓
+
+{% hilight c linenos %}
+int main() {
+	printf("Let's Go!");
+	return 0;
+}
+{% endhighlight %}
+
 
 [This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
 
