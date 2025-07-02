@@ -204,7 +204,7 @@ It can also be centered!
 You can add notification, warning and error boxes like this:
 通知、警告、エラーボックスがおける
 
-###　通知
+### 通知
 
 {: .box-note}
 **Note:** これが通知ボックス
