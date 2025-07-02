@@ -294,6 +294,7 @@ exclude:
   - screenshot.png
   - docs/
 
+url: "https://mikami1004.github.io"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
