@@ -295,6 +295,7 @@ exclude:
   - docs/
 
 url: "https://mikami1004.github.io"
+baseurl: /blog/
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
