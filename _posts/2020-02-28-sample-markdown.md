@@ -195,7 +195,7 @@ If the above image is broken, then you'll need to follow the instructions [in th
 ![Creape](/blog/assets/img/crepe.jpg)
 
 <br>
-その２．　`![Creape]({{ '/assets/img/crepe.jpg' | relative_url }})`
+その２. 　{% raw %}![Creape]({{ '/assets/img/crepe.jpg' | relative_url }}){% endraw %}
 ![Creape]({{ '/assets/img/crepe.jpg' | relative_url }})
 
 <br>
