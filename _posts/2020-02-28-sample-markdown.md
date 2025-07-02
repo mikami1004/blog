@@ -101,19 +101,20 @@ int main() {
 ```
 Jekyll(Liquid)のタグによって以下のような記述も可能
 
-```
+```{% raw %}
 {% highlight c %}
-{% raw %}
+#include <stdio.h>
 int main() {
 	printf("Let's Go!");
 	return 0;
 }
-{% endraw %}
 {% endhighlight %}
+{% endraw %}
 ```
 結果↓
 
 {% highlight c %}
+#include <stdio.h>
 int main() {
 	printf("Let's Go!");
 	return 0;
@@ -122,18 +123,20 @@ int main() {
 
 行番号付きにもできるよ
 ```
-{% highlight c linenos %}
 {% raw %}
+{% highlight c linenos %}
+#include <stdio.h>
 int main() {
 	printf("Let's Go!");
 	return 0;
 }
-{% endraw %}
 {% endhighlight %}
+{% endraw %}
 ```
 結果↓
 
 {% highlight c linenos %}
+#include <stdio.h>
 int main() {
 	printf("Let's Go!");
 	return 0;
@@ -186,6 +189,17 @@ If the above image is broken, then you'll need to follow the instructions [in th
 
 ![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
 
+つまり、{% raw %}![Creape](/assets/img/crepe.jpg){% endraw %}では表示できないので、以下のどちらかの方法を用いる必要がある。
+
+その１．　{% raw %}![Creape](/blog/assets/img/crepe.jpg){% endraw %}
+![Creape](/blog/assets/img/crepe.jpg)
+
+<br>
+その２．　`![Creape]({{ '/assets/img/crepe.jpg' | relative_url }}){% endraw %}`
+![Creape]({{ '/assets/img/crepe.jpg' | relative_url }})
+
+<br>
+
 
 ## Boxes
 You can add notification, warning and error boxes like this:
@@ -207,4 +221,4 @@ You can add notification, warning and error boxes like this:
 
 ## Local URLs in project sites {#local-urls}
 
-サイト内のリンクだよ{#local-link}
+## サイト内のリンクだよ{#local-link}
