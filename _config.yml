@@ -294,7 +294,7 @@ exclude:
   - screenshot.png
   - docs/
 
-url: "https://mikami1004.github.io/"
+url: "https://mikami1004.github.io"
 baseurl: "blog"
 plugins:
   - jekyll-paginate
