@@ -102,7 +102,7 @@ int main() {
 Jekyll(Liquid)のタグによって以下のような記述も可能
 
 ```
-{% hilight c %}
+{% highlight c %}
 int main() {
 	printf("Let's Go!");
 	return 0;
@@ -111,7 +111,7 @@ int main() {
 ```
 結果↓
 
-{% hilight c %}
+{% highlight c %}
 int main() {
 	printf("Let's Go!");
 	return 0;
@@ -120,7 +120,7 @@ int main() {
 
 行番号付きにもできるよ
 ```
-{% hilight c linenos %}
+{% highlight c linenos %}
 int main() {
 	printf("Let's Go!");
 	return 0;
@@ -129,7 +129,7 @@ int main() {
 ```
 結果↓
 
-{% hilight c linenos %}
+{% highlight c linenos %}
 int main() {
 	printf("Let's Go!");
 	return 0;
