@@ -2,18 +2,20 @@
 layout: post
 title: マークダウンの勉強だよ
 subtitle: ～Beautiful Jekyllってなんすか～
-gh-repo: daattali/beautiful-jekyll
+gh-repo: mikami1004i/blog
 gh-badge: [star, fork, follow]
 tags: [test]
 comments: true
 mathjax: true
-author: Bill Smith
+author: Rito
 ---
 
-{: .box-success}
-This is a demo post to show you how to write blog posts with markdown.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](https://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/tables/etc.<br/>I also encourage you to look at the [code that created this post](https://raw.githubusercontent.com/daattali/beautiful-jekyll/master/_posts/2020-02-28-sample-markdown.md) to learn some more advanced tips about using markdown in Beautiful Jekyll.
+
+# 前書きなのだ
+マークダウンがよくわからないので勉強もかねて書いておきます。このサイトはBeautiful Jekyllっていうのを使っていてちょっと特殊なマークダウン記法が使えるようになってる。
+
 # 見出し
-- 二つ目までは下線がつくよ
+- 二つ目までは~~下線がつくよ~~ つかないよ
 
 ```
 # 見出し
@@ -173,8 +175,6 @@ When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they 
 
 
 ![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)<br>
-これ表示されるんかな<br>
-![Creape](/assets/img/crepe.jpg)
 
 It can also be centered!
 
@@ -185,40 +185,44 @@ It can also be centered!
 
 ![Crepe](/assets/img/crepe.jpg)
 
-If the above image is broken, then you'll need to follow the instructions [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). Here is proof that it can be fixed:
+> If the above image is broken, then you'll need to follow the instructions [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). Here is proof that it can be fixed:
 
 ![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
 
 つまり、`![Creape](/assets/img/crepe.jpg)`では表示できないので、以下のどちらかの方法を用いる必要がある。
 
-その１．　`![Creape](/blog/assets/img/crepe.jpg)`
+その１．　**{% raw %}![Creape](/blog/assets/img/crepe.jpg){% endraw %}**
 ![Creape](/blog/assets/img/crepe.jpg)
 
-<br>
-その２. 　{% raw %}![Creape]({{ '/assets/img/crepe.jpg' | relative_url }}){% endraw %}
+
+その２. 　**{% raw %}![Creape]({{ '/assets/img/crepe.jpg' | relative_url }}){% endraw %}**
 ![Creape]({{ '/assets/img/crepe.jpg' | relative_url }})
 
-<br>
 
 
-## Boxes
+# ボックス
 You can add notification, warning and error boxes like this:
+通知、警告、エラーボックスがおける
 
-### Notification
+###　通知
 
 {: .box-note}
-**Note:** This is a notification box.
+**Note:** これが通知ボックス
 
-### Warning
+### 警告
 
 {: .box-warning}
-**Warning:** This is a warning box.
+**Warning:** これが警告ボックス
 
-### Error
+### エラー
 
 {: .box-error}
-**Error:** This is an error box.
-
-## Local URLs in project sites {#local-urls}
+**Error:** これがエラーボックス
 
 ## サイト内のリンクだよ {#local-link}
+
+# 参考になるサイト
+
+- [Jekyll公式サイト](https://jekyllrb-ja.github.io/docs/)
+- [kramdown公式サイト](https://kramdown.gettalong.org/quickref.html)(このブログはkramdownで書いてるっぽい？)
+- [これもわかりやすいサイト](https://mae0003.github.io/markdown/2015/06/21/kramdownRefference)
