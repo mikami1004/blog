@@ -25,7 +25,7 @@ This is a demo post to show you how to write blog posts with markdown.  I strong
 # 見出し
 ## 見出し２
 ###### 見出し６
-</br>
+<br>
 
 # 斜体、太字、訂正線
 
@@ -36,10 +36,10 @@ This is a demo post to show you how to write blog posts with markdown.  I strong
 ```
 結果↓
 
-*斜体*</br>
-**太字**</br>
-~~訂正線~~</br>
-</br>
+*斜体*<br>
+**太字**<br>
+~~訂正線~~<br>
+<br>
 
 # 箇条書き
 ```
@@ -55,7 +55,7 @@ This is a demo post to show you how to write blog posts with markdown.  I strong
 	- ネスト1行目
 		- ネストのネスト1行目
 			- ネストのネストのネスト1行目
-</br>
+<br>
 
 # 番号付きリスト
 番号を変えなくても自動で順番にしてくれるよ
@@ -76,7 +76,7 @@ This is a demo post to show you how to write blog posts with markdown.  I strong
 		1. キャベツ
 	1. 野菜っておいしいよね
 1. 果物
-</br>
+<br>
 
 # コード記述
 三連バッククォートの後に言語名を描くと、その言語に合わせてシンタックスハイライトが適用されるよ
@@ -103,10 +103,12 @@ Jekyll(Liquid)のタグによって以下のような記述も可能
 
 ```
 {% highlight c %}
+{% raw %}
 int main() {
 	printf("Let's Go!");
 	return 0;
 }
+{% endraw %}
 {% endhighlight %}
 ```
 結果↓
@@ -121,10 +123,12 @@ int main() {
 行番号付きにもできるよ
 ```
 {% highlight c linenos %}
+{% raw %}
 int main() {
 	printf("Let's Go!");
 	return 0;
 }
+{% endraw %}
 {% endhighlight %}
 ```
 結果↓
@@ -136,55 +140,51 @@ int main() {
 }
 {% endhighlight %}
 
+# 引用
+```
+> 参考：https://www.google.com/
+```
+結果↓
+> 参考：https://www.google.com/
 
-[This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
+# リンク
+[このリンク](http://endless.horse/)はほかのサイトのリンク、[このリンク](#local-link)はサイト内のリンク。（最後に飛ぶぞ）
 
-Here's a table:
 
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
+# テーブル
 
+| 左寄せ | 中央寄せ | 右寄せ |
+| :--- | :---: | ---: |
+| Dave | Six | Male |
+| Ninez | Eleven | Female |
+| Neiy | Five | Female |
+| Kk | Three | Male |
+<br>
+# 数式
+MathJaxっていうのが使えるらしい。<br>
 You can use [MathJax](https://www.mathjax.org/) to write LaTeX expressions. For example:
 When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-How about a yummy crepe?
+# 画像
 
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+
+![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)<br>
+これ表示されるんかな<br>
+![Creape](/assets/img/crepe.jpg)
 
 It can also be centered!
 
 ![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg){: .mx-auto.d-block :}
 
-Here's a code chunk:
+### 画像についての注意
+> When hosting a *project site* on GitHub Pages (for example, `https://USERNAME.github.io/MyProject`), URLs that begin with `/` and refer to local files may not work correctly due to how the root URL (`/`) is interpreted by GitHub Pages. You can read more about it [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). To demonstrate the issue, the following local image will be broken **if your site is a project site:**
 
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
+![Crepe](/assets/img/crepe.jpg)
 
-And here is the same code with syntax highlighting:
+If the above image is broken, then you'll need to follow the instructions [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). Here is proof that it can be fixed:
 
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
+![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
 
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
 
 ## Boxes
 You can add notification, warning and error boxes like this:
@@ -206,10 +206,4 @@ You can add notification, warning and error boxes like this:
 
 ## Local URLs in project sites {#local-urls}
 
-When hosting a *project site* on GitHub Pages (for example, `https://USERNAME.github.io/MyProject`), URLs that begin with `/` and refer to local files may not work correctly due to how the root URL (`/`) is interpreted by GitHub Pages. You can read more about it [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). To demonstrate the issue, the following local image will be broken **if your site is a project site:**
-
-![Crepe](/assets/img/crepe.jpg)
-
-If the above image is broken, then you'll need to follow the instructions [in the FAQ](https://beautifuljekyll.com/faq/#links-in-project-page). Here is proof that it can be fixed:
-
-![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
+サイト内のリンクだよ{#local-link}
