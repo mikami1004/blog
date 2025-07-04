@@ -1,4 +1,4 @@
-const codeBlocks = document.querySelectorAll('.code-header + .highlighter-rouge, .code-header + .highlight');
+const codeBlocks = document.querySelectorAll('.highlighter-rouge .code-header, .highlight + .code-header');
 const copyCodeButtons = document.querySelectorAll('.copy-code-button');
 
 copyCodeButtons.forEach((copyCodeButton, index) => {
