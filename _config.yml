@@ -21,6 +21,7 @@ author: りと
 
 navbar-links:
   About Me: "aboutme"
+  Categories: "tags"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
@@ -100,7 +101,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "mikami1004.io"
+# url-pretty: "mikami1004.io"
 
 # Add the website title to the title of every page
 title-on-all-pages: true

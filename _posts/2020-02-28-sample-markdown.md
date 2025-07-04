@@ -2,8 +2,8 @@
 layout: post
 title: マークダウンの勉強だよ
 subtitle: ～Beautiful Jekyllってなんすか～
-gh-repo: mikami1004i/blog
-gh-badge: [star, fork, follow]
+gh-repo: mikami1004/blog
+gh-badge: [star, follow]
 tags: [test]
 comments: true
 mathjax: true
