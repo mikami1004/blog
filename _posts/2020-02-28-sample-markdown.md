@@ -94,8 +94,8 @@ int main() {
 ```
 ````
 結果↓
-{% include codeHeader.html %}
 ``` c
+{% include codeHeader.html %}
 #include <stdio.h>
 
 int main() {
@@ -116,8 +116,8 @@ int main() {
 {% endraw %}
 ```
 結果↓
-{% include codeHeader.html %}
 {% highlight c %}
+{% include codeHeader.html %}
 #include <stdio.h>
 int main() {
 	printf("Let's Go!");
