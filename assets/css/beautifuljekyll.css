@@ -24,12 +24,6 @@ layout: null
   --mid-col: #808080;
 }
 
-/* --- Add --- */
-.copy-code-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 /* --- General --- */
 
 html {
