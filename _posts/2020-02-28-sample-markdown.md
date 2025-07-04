@@ -7,6 +7,7 @@ gh-badge: [star, fork, follow]
 tags: [test]
 comments: true
 mathjax: true
+js: /assets/js/copyCode.js
 author: Rito
 ---
 
@@ -93,6 +94,7 @@ int main() {
 ```
 ````
 結果↓
+{% include codeHeader.html %}
 ``` c
 #include <stdio.h>
 
@@ -114,7 +116,7 @@ int main() {
 {% endraw %}
 ```
 結果↓
-
+{% include codeHeader.html %}
 {% highlight c %}
 #include <stdio.h>
 int main() {
