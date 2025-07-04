@@ -888,6 +888,7 @@ pre {
   padding: 0.59375rem;
 }
 .highlight pre {
+  position: relative;
   border: none;
   background: none;
   margin: 0;
