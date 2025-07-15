@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="shortcut icon" href="/blog/favicon.ico">
   {% seo %}
 
   {% capture pagetitle %}
@@ -165,7 +165,7 @@
 
   {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
   {% if favicon_exists == 1 %}
-  <link rel="icon" href="../favicon.ico" />
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
   {% endif %}
 
   {% if page.head-extra %}
